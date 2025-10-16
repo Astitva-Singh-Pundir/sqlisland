@@ -39,5 +39,7 @@ SELECT inhabitant.name FROM inhabitant,village ON village.villageid = inhabitant
 SELECT SUM(inhabitant.gold) FROM inhabitant,village ON village.villageid = inhabitant.villageid WHERE (job = 'baker' OR job = 'dealer' or job = 'merchant')
 
 SELECT state, AVG(inhabitant.gold) FROM inhabitant GROUP BY state ORDER BY AVG(inhabitant.gold)
+
 DELETE FROM inhabitant WHERE name= 'Dirty Diane'
+
 UPDATE inhabitant SET state = 'friendly' WHERE job = 'pilot'
